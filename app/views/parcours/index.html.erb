@@ -1,2 +1,27 @@
 <h1>Parcours#index</h1>
-<p>Find me in app/views/parcours/index.html.erb</p>
+
+<div class='row d-bloc'>
+  <%@parcour.each do |parcour|%>
+
+	<div class='col-md-8 col-lg-8 float-left'>
+	  <%=parcour.description%>	
+	</div>
+
+	<div class='col-sm-2'>
+	  <%=cl_image_tag parcour.photo1, class:'photo1'%>
+	  <%=cl_image_tag parcour.photo2, class:'photo2'%>
+	</div>
+		
+	<div class='col-sm-2'>
+	  <%=cl_image_tag parcour.photo3, class:'photo3'%>
+	  <%=cl_image_tag parcour.photo4, class:'photo4'%>
+	</div>	
+		
+	<div class='col-sm-4'>
+	  <%=cl_image_tag parcour.photo5, class:'photo5'%>
+	</div>
+<%end%>
+</div>
+
+
+</div>
