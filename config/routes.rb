@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contact/index'
   get 'parcours/index'
   get 'homes/index'
   get 'bentos/index'
@@ -10,6 +11,6 @@ Rails.application.routes.draw do
   get 'ateliers', to: 'ateliers#index', as: 'ateliers'
   get 'lesbentos', to: 'bentos#index', as: 'bentos'
   get 'monparcours', to: 'parcours#index', as: 'parcours'
-  get 'contact', to: 'contact#show', as: 'contact'
+  get 'contact', to: 'contact#index', as: 'contact'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
