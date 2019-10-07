@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+.image {
+	width: 122px;
+	height: 122px;
+}
+
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+	}
+}
+
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    margin-left: 3vw !important;
+	}
+}
