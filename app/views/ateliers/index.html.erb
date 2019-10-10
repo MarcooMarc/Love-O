@@ -1,4 +1,23 @@
-<p>ATELIER</p>
+<div class="card-deck">
 <%@atelier.each do |atelier|%>
-<%= cl_image_tag atelier.photo%>
+
+    
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%=atelier.titre%></h5>
+      <p class="card-text"><%=atelier.description%></p>
+    </div>
+	  <%= cl_image_tag atelier.photo, class:'card-img'%>
+    <div class="card-footer">
+      <div class="d-flex justify-content-between">
+      	<p class="text-muted"><%=atelier.date%> de <%=atelier.horaires%></p>
+       	<p class="text-muted"><%=atelier.places%> places</p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <p class="text-muted"><%=atelier.lieu%></p>
+        <p class="text-muted"><%=atelier.prix%> euros</p>
+  	  </div>
+    </div>
+  </div>  
 <%end%>
+</div>

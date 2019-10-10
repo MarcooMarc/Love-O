@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_07_100513) do
+ActiveRecord::Schema.define(version: 2019_10_10_124513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,12 @@ ActiveRecord::Schema.define(version: 2019_10_07_100513) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "commandes", force: :cascade do |t|
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "homes", force: :cascade do |t|
     t.string "photo"
     t.datetime "created_at", null: false
@@ -48,7 +54,7 @@ ActiveRecord::Schema.define(version: 2019_10_07_100513) do
   end
 
   create_table "parcours", force: :cascade do |t|
-    t.string "description"
+    t.text "description"
     t.string "photo1"
     t.string "photo2"
     t.string "photo3"
@@ -58,4 +64,16 @@ ActiveRecord::Schema.define(version: 2019_10_07_100513) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.string "email"
+    t.string "phonenumber"
+    t.string "livraison"
+    t.string "lieu"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

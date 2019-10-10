@@ -3,8 +3,14 @@ class CommandesController < ApplicationController
   	@commande = Commande.all
   end
 
+  def new
+  	@commande = Commande.new
+  end
+
   def create
-    @user = User.new(params[:user])
-    @user.save
+    @commande = Commande.new(params[:comamnde])
+    user = User.find_or_create(params[:user])
+    @commande.user = user
+    @commande.save
   end
 end
