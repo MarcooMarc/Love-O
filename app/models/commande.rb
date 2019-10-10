@@ -1,4 +1,4 @@
 class Commande < ApplicationRecord
-	has_many :users
+	belongs_to :customer
 	mount_uploader :photo, PhotoUploader
 end

@@ -1,0 +1,58 @@
+<p>fpezfzf<div class="bg-white">
+  <div class="bg-white row row-condensed">
+    <div class="col-md-7">
+      <div class="p-5 m-3">
+        <div class="m-3 mb-5">
+          <h2>Nous allons vous aider à publier votre annonce.</h2>
+        </div>
+        <div class="m-3">
+          <div class="mb-2">
+          <strong class="text-secondary">ÉTAPE 1&nbsp;</strong>
+          </div>
+          <div class="h4 mb-4">Saissisez vos coordonnées pour passer la commande</div>
+            <div>
+              <div class="row row-condensed">
+                <div class="col-md-6 col-sm-12">
+                 <%= simple_form_for @commande do |f|%>
+	                 <%= f.input :quantités, :include_blank => false%>
+
+                   <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="addon-wrapping">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username"  aria-describedby="addon-wrapping">                  
+                  </div>
+
+                   <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="addon-wrapping">@</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Username"  aria-describedby="addon-wrapping">                  
+                  </div>
+
+
+
+
+	                 <%= text_field_tag "customer[name]" %>
+                   <%= text_field_tag "customer[surname]" %>
+                   <%= text_field_tag "customer[email]" %>
+                   <%= text_field_tag "customer[phonenumber]" %>
+                   <%= text_field_tag "customer[livraison]" %>
+                   <%= text_field_tag "customer[lieu]" %>
+
+	                 <%= f.submit :"COMMANDER", class: 'btn btn-success'%>   
+                 <% end %>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 landing__right-col">
+      <div class="_e296pg" style="width:100%;height:auto">
+        <img class="_1u6feuz3" src="https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png" width="100%" height="auto" alt="Commencer">
+      </div>
+    </div>
+  </div>
+</div>
+</p>
