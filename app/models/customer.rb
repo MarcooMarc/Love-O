@@ -4,5 +4,6 @@ class Customer < ApplicationRecord
   return customer unless customer.nil?
 
   self.create(email: customer_params)
+
   end
 end
