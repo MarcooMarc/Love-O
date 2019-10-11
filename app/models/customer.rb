@@ -6,4 +6,12 @@ class Customer < ApplicationRecord
   self.create(email: customer_params)
 
   end
+
+after_create :send_bento_reservation_email
+
+private
+def send_bento_reservation_email
+  UserMailer.with(customer: self).order.delivery_now
+end
+
 end
