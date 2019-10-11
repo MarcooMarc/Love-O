@@ -70,3 +70,4 @@ gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'simple_form'
 gem 'devise'
+gem 'letter_opener', group: :development

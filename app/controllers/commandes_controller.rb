@@ -1,4 +1,8 @@
 class CommandesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: :new
+  skip_before_action :authenticate_user!, only: :create
+
   def index
     @commande = Commande.all
   end
@@ -6,6 +10,8 @@ class CommandesController < ApplicationController
   def new
     @commande = Commande.new
   end
+
+
 
   def create
     @commande = Commande.new(commande_params)
