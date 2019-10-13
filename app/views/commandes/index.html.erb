@@ -1,3 +1,27 @@
-<h1>Commandes#index</h1>
-<p>Find me in app/views/commandes/index.html.erb</p>
-<%=  link_to "COMMANDER", macommande_path%>
+<%= image_tag "bandeau-table.jpg", class:"img-fluid"%>
+
+<div class='row py-4'>
+  <div class='col-12 col-md-8 pr-30'>
+	<h1>Healing Bento Box</h1>
+	  	<p>Healing Bento Box aux légumes de saison. Cuisine vegan créative. Les bentos sont préparés sur commande faite le lundi dernier délais pour une livraison le mercredi, jeudi ou vendredi matin.  Je fonctionne sur réservation pour moins de gaspillage alimentaire. Pas de menu, tout est préparé en fonction des produits de saison et des arrivages frais du moment. C'est à chaque fois de nouvelles saveurs. Limité en gluten.</p>
+	  	<p>Emballage 100% compostable ou Bento en verre sous caution de 5 euros. (Attention la caution est rendue si la boite revient en bonne état!)</p>
+	  	<p>Livraison sur Massy :mercredi, jeudi, vendredi de 9h à 11h</p>
+	  	<p>Livraison sur Verrières possible : jeudi  de 9h à 11h.</p>
+
+		<p>Bento 13 euros sur place ou 16,50 euros avec livraison aux points de vente d'Antony, de Verrières et de Massy (règlement en espèce ou CB)</p>
+	
+		<p>​Pour réserver : loveoriginekitchen@gmail.com</p>
+		<p>- il  vous suffit de m'envoyer un email en précisant le jour et la quantité de bentos désirés. Je vous confirmerai votre réservation par retour de mail. Merci. Nathalie</p>
+		<%=  link_to "COMMANDER",macommande_path, :class =>'btn btn-success float-right pr-10'%>
+  </div>
+	
+  <div class='col-12 col-md-4'>	
+    <figure class="figure">
+      <%= image_tag "bento.png", class:"rfigure-img img-fluid rounded center-block"%> 
+      <figcaption class="figure-caption text-right">Bento Love Origin Kitchen</figcaption>
+    </figure>
+  </div>
+
+</div>
+
+
