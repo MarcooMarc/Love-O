@@ -71,3 +71,4 @@ gem 'rails_admin', '>= 1.0.0.rc'
 gem 'simple_form'
 gem 'devise'
 gem 'letter_opener', group: :development
+gem 'bootstrap', '~> 4.0.0'
