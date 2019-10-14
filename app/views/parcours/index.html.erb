@@ -1,8 +1,8 @@
 <div class='row d-bloc'>
   <%@parcour.each do |parcour|%>
 
-	<div class='col-md-8 col-lg-8 float-left'>
-	  <%=parcour.description%>	
+	<div class='col-md-8 col-lg-8 float-left text-justify'>
+	  <%=break_line(parcour.description)%>	
 	</div>
 
 	<div class='col-sm-2'>

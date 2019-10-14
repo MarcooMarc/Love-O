@@ -4,21 +4,22 @@
 
 
   <%@atelier.each do |atelier|%>
-  <div class="card mt-5">
+  <div class="card mt-5 ">
     <div class="row">
-      
-      <div class="col-md-4">
-       <%= cl_image_tag atelier.photo, class:'card-img w-100'%>
+      <div class="col-md-4 ">
+       <%= cl_image_tag atelier.photo, class:'card-img'%>
       </div>
 
-      <div class="col-md-8 px-3">
-        <div class="card-block px-1">      
-            <div>
+      <div class="col-md-8">
+        <div class="card-block px-1">
+          <div class="perso">
+
+            <div style= 'height: 20vh;'>
               <h4 class="card-title py-1 my-1 "><%=atelier.titre%></h4>          
               <p class="card-text my-2"><%=atelier.description%></p>
             </div>
 
-            <div class ='card-footer align-self-end'>  
+            <div class ='card-footer w-100'>
               <div class="d-flex justify-content-between">
                 <p class="text-muted"><%=atelier.date%> de <%=atelier.horaires%></p>
                 <p class="text-muted"><%=atelier.places%> places</p>
@@ -27,13 +28,14 @@
               <div class="d-flex justify-content-between">
                 <p class="text-muted"><%=atelier.lieu%></p>
                 <p class="text-muted"><%=atelier.prix%> euros</p>
-                <a href="#" class="btn btn-primary">Read More</a>
+                <a href="#" class="btn btn-primary">S'INSCRIRE</a>
               </div>
             </div>
+          </div>
 
         </div>
       </div>
     </div>
   </div>
-<%end%>
+  <%end%>
 </div>
