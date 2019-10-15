@@ -1,7 +1,7 @@
 class CommandesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
-  skip_before_action :authenticate_user!, only: :new
-  skip_before_action :authenticate_user!, only: :create
+  #skip_before_action :authenticate_admin!, only: :index
+  #skip_before_action :authenticate_admin!, only: :new
+  #skip_before_action :authenticate_admin!, only: :create
 
   def index
     @commande = Commande.all
@@ -18,6 +18,7 @@ class CommandesController < ApplicationController
     customer = Customer.find_or_create(params[:customer][:email])
     @commande.customer = customer
     @commande.save
+    flash[:success] = "Votre commande est validée vous allez recevoir un e-mail"
     redirect_to root_path
   end
 

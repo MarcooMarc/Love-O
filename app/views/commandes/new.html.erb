@@ -1,6 +1,8 @@
-<h1>Passer votre commande</h1>
-<div class='row align-items-center py-4'>
+<%= image_tag "bandeau-table.jpg", class:"img-fluid"%>
+
+<div class='row align-items-center'>
   <div class='col-12 col-md-8 pr-30'>
+<h1 class="mt-4">Passer votre commande</h1>
     <%= simple_form_for @commande do |f|%>
     <%= f.input :quantités, :include_blank => false%>
 
@@ -47,13 +49,13 @@
     <%= select_tag "customer[lieu]", raw("<option>Massy-Palaiseau</option><option>Antony</option> <option>Verrière-le-Buisson</option>"), class:'form-control', :prompt => 'Choissisez votre lieu de livraison'%>
     </div>
 
-    <%= f.submit :"COMMANDER", class: 'btn btn-success float-right'%>   
+    <%= f.submit :"COMMANDER", class: 'btn btn-success float-right mt-2'%>   
     <% end %>
   </div>
 
   <div class='col-12 col-md-4'> 
     <figure class="figure">
-      <%= image_tag "bento.png", class:"rfigure-img img-fluid rounded align-middle mt-2"%> 
+      <%= image_tag "bento.png", class:"rfigure-img img-fluid rounded align-middle pt-5"%> 
       <figcaption class="figure-caption text-right">Bento Love Origin Kitchen</figcaption>
     </figure>
   </div>

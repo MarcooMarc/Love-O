@@ -1,10 +1,10 @@
 <%= image_tag "bandeau-table.jpg", class:"img-fluid"%>
 
-<h1> Les Workshops</h1>
+<h1 class="mt-4"> Les Workshops</h1>
 
 
   <%@atelier.each do |atelier|%>
-  <div class="card mt-5 ">
+  <div class="card my-3 ">
     <div class="row">
       <div class="col-md-4 ">
        <%= cl_image_tag atelier.photo, class:'card-img'%>
@@ -38,4 +38,3 @@
     </div>
   </div>
   <%end%>
-</div>

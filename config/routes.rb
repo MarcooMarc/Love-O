@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :admins, controllers: { registrations: 'registrations' }
  
-  mount RailsAdmin::Engine => '/GodMode', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/GodMode', as: 'Admin'
 
 
   root to: 'homes#index'

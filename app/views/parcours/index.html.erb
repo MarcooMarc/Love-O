@@ -1,25 +1,14 @@
 <div class='row d-bloc'>
   <%@parcour.each do |parcour|%>
 
-	<div class='col-md-8 col-lg-8 float-left text-justify'>
+	<div class='col-md-8 col-lg-8 float-left text-justify mt-4'>
 	  <%=break_line(parcour.description)%>	
 	</div>
 
 	<div class='col-sm-2'>
-	  <%=cl_image_tag parcour.photo1, class:'photo1'%>
-	  <%=cl_image_tag parcour.photo2, class:'photo2'%>
-	</div>
-		
-	<div class='col-sm-2'>
-	  <%=cl_image_tag parcour.photo3, class:'photo3'%>
-	  <%=cl_image_tag parcour.photo4, class:'photo4'%>
+	  <%=image_tag "nature.png", class:'mt-4'%>
 	</div>	
-		
-	<div class='col-sm-4'>
-	  <%=cl_image_tag parcour.photo5, class:'photo5'%>
-	</div>
 <%end%>
 </div>
-
 
 </div>
