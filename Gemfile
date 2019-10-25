@@ -65,10 +65,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
-
+gem 'devise'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'simple_form'
-gem 'devise'
 gem 'letter_opener', group: :development
 gem 'bootstrap', '~> 4.0.0'

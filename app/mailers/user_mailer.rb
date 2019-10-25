@@ -6,8 +6,8 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.welcome.subject
   #
   def welcome
-  	@customers = params[:customer]
+  	@customer = params[:customer]
 
-    mail to: @customers.email, subject:'Votre commande LoveOriginKitchen'
+    mail to: @customer.email, subject: 'Votre commande LoveOriginKitchen'
   end
 end
