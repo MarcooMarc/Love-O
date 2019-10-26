@@ -8,6 +8,15 @@ class CommandesController < ApplicationController
   end
 
   def create
+    infos = {
+      email: params[:customer][:email],
+      name: params[:customer][:name],
+      surname: params[:customer][:surname],
+      lieu: params[:customer][:lieu],
+      phonenumber: params[:customer][:phonenumber],
+      livraison: params[:customer][:livraison]
+    }
+
     @commande = Commande.new(commande_params)
     customer = Customer.find_or_create(params[:customer][:email])
     @commande.customer = customer
