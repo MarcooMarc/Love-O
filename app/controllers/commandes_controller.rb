@@ -21,7 +21,7 @@ class CommandesController < ApplicationController
     customer = Customer.find_or_create(params[:customer][:email])
     @commande.customer = customer
     @commande.save
-    flash[:success] = "Votre commande est validée vous allez recevoir un e-mail"
+    flash[:notice] = "Votre commande est validée vous allez recevoir un e-mail"
     redirect_to root_path
   end
 

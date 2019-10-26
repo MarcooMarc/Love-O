@@ -11,7 +11,7 @@ class AteliersController < ApplicationController
     @atelier = Atelier.new
     customer = Participant.find_or_create(params[:participant][:email])
     @atelier.save
-    flash[:success] = "Votre atelier est validée vous allez recevoir un e-mail"
+    flash[:notice] = "Votre atelier est validée vous allez recevoir un e-mail"
     redirect_to root_path
   end
 
