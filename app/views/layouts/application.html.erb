@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>LoveO</title>
     <%= csrf_meta_tags %>
@@ -23,61 +24,59 @@
   </head>
 
   <body>
-
     <div class="container"> 
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <%= image_tag "Logo.jpg",class:"image"%></a>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item"><%=  link_to "HOME", root_path, class:"nav-link"%></li>
-          <li class="nav-item"><%=  link_to "COMMANDER", commander_path, class:"nav-link"%></li>
-          <li class="nav-item"><%=  link_to "WORKSHOPS", ateliers_path, class:"nav-link"%></li>
-          <li class="nav-item"><%=  link_to "LES BENTOS", bentos_path, class:"nav-link"%></li>
-          <li class="nav-item"><%=  link_to "MON PARCOURS", parcours_path, class:"nav-link"%></li>
-          <li class="nav-item"><%=  link_to "CONTACT", contact_path, class:"nav-link"%></li>
-        </ul>
-      </div>
-    </nav>
-    <div><%= flash[:success] %></div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <%= image_tag "Logo.jpg",class:"image"%></a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item"><%=  link_to "HOME", root_path, class:"nav-link"%></li>
+              <li class="nav-item"><%=  link_to "COMMANDER", commander_path, class:"nav-link"%></li>
+              <li class="nav-item"><%=  link_to "WORKSHOPS", ateliers_path, class:"nav-link"%></li>
+              <li class="nav-item"><%=  link_to "LES BENTOS", bentos_path, class:"nav-link"%></li>
+              <li class="nav-item"><%=  link_to "MON PARCOURS", parcours_path, class:"nav-link"%></li>
+              <li class="nav-item"><%=  link_to "CONTACT", contact_path, class:"nav-link"%></li>
+            </ul>
+          </div>
+        </nav>
+        <div><%= flash[:success] %></div>
 
-   <%= yield %>
-
-
+      <%= yield %>
 
 <!-- Footer -->
-<footer id="sticky-footer" class="mt-4 py-3 bg-light">
-  <div class="container text-center text-light">
- <!-- Grid row-->
-    <div class="row">
+        <footer id="sticky-footer" class="mt-4 py-3 bg-light">
+          <div class="container text-center text-light">
+         <!-- Grid row-->
+            <div class="row">
 
-      <!-- Grid column -->
-      <div class="col-md-12">
-        <div class="mb-3 flex-center">
+              <!-- Grid column -->
+              <div class="col-md-12">
+                <div class="mb-3 flex-center">
 
-          <p>REJOIGNEZ MOI</p>
+                  <p>REJOIGNEZ MOI</p>
 
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mx-4 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mx-4 fa-2x"> </i>
-          </a>
-         
-        </div>
-      </div>
-      <!-- Grid column -->
+                  <!-- Facebook -->
+                  <a class="fb-ic">
+                    <i class="fab fa-facebook-f fa-lg white-text mx-4 fa-2x"> </i>
+                  </a>
+                  <!--Instagram-->
+                  <a class="ins-ic">
+                    <i class="fab fa-instagram fa-lg white-text mx-4 fa-2x"> </i>
+                  </a>
+                 
+                </div>
+              </div>
+              <!-- Grid column -->
 
-    </div>
-    <!-- Grid row-->
-      <small>Copyright &copy; Love Origin Kitchen</small>
-  </div>
-</footer>
+            </div>
+            <!-- Grid row-->
+              <small>Copyright &copy; Love Origin Kitchen</small>
+        </footer>
 <!-- Footer -->
+    
+      </div>
   </body>
 </html>
