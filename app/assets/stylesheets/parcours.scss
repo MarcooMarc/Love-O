@@ -1,36 +1,6 @@
-// Place all the styles related to the parcours controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.right {
-	background-color: blue;
-
-	width: 35%;
-}
-
-.left {
-	background-color: red;
-	width: 65%;
-}
-
-.photo1 {
-    width: 12em;
-    height: 20em;
-    padding: 5px;
-}
-
-.photo2 {
-    width: 12em;
-    height: 30%;
-    padding: 5px;
-}
-
-.photo3 {
-
-    padding: 5px;
-}
-
-.photo4 {
-    width: 12em;
-    height: 51%;
-    padding: 5px;
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%;
+    height: 55em;
 }
