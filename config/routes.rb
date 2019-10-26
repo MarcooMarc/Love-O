@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/GodMode', as: 'rails_admin'
   
   root to: 'homes#index'
-  get 'workshops', to: 'ateliers#index'
-  get 'monworkshop', to: 'ateliers#new', as: 'monworkshop'
+  get 'ateliers', to: 'ateliers#index'
+  get 'monatelier', to: 'ateliers#new'
 
   get 'lesbentos', to: 'bentos#index', as: 'bentos'
   get 'monparcours', to: 'parcours#index', as: 'parcours'
