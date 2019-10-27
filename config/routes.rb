@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'lesbentos', to: 'bentos#index', as: 'bentos'
   get 'monparcours', to: 'parcours#index', as: 'parcours'
-  get 'contact', to: 'contact#index', as: 'contact'
+  get 'contacts', to: 'contacts#new', as: 'contact'
   get 'ateliers', to: 'ateliers#index', as: 'ateliers'
   
   get 'commander', to: 'commandes#index'
@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :commandes, only: :create
   resources :workshops, only: :create
+  resources :contacts, only: :create
 
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

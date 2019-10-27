@@ -1,4 +1,6 @@
-
+textarea.form-control {
+    height: 30vh !important;
+}
 
  body {
     margin: 0;
