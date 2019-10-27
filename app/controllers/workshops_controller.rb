@@ -10,7 +10,8 @@ class WorkshopsController < ApplicationController
 
   def create
     @workshop = Workshop.new
-    customer = Participant.find_or_create(params[:participant][:email])
+    customer = Participant.find_or_create(params[:participant][:email], params[:participant][:name], 
+    params[:participant][:surname], params[:participant][:phonenumber])
     @workshop.save
     flash[:notice] = "Votre atelier est validée vous allez recevoir un e-mail"
     redirect_to root_path
@@ -25,3 +26,4 @@ class WorkshopsController < ApplicationController
     params.require('participant').permit(:phonenumber)
   end
 end
+

@@ -8,17 +8,9 @@ class CommandesController < ApplicationController
   end
 
   def create
-    infos = {
-      email: params[:customer][:email],
-      name: params[:customer][:name],
-      surname: params[:customer][:surname],
-      lieu: params[:customer][:lieu],
-      phonenumber: params[:customer][:phonenumber],
-      livraison: params[:customer][:livraison]
-    }
-
     @commande = Commande.new(commande_params)
-    customer = Customer.find_or_create(params[:customer][:email])
+    customer = Customer.find_or_create(params[:customer][:name], params[:customer][:surname], params[:customer][:email],
+    params[:customer][:phonenumber], params[:customer][:lieu], params[:customer][:livraison])
     @commande.customer = customer
     @commande.save
     flash[:notice] = "Votre commande est validée vous allez recevoir un e-mail"

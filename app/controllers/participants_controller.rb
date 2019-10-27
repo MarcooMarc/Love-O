@@ -14,3 +14,5 @@ private
     params.require(:participant).permit(:content)
   end
 end
+
+
