@@ -1,5 +1,8 @@
 class Customer < ApplicationRecord
 
+  validates :name, presence: true
+  validates :surname, presence: true
+
   def self.find_or_create(name, surname, email, phonenumber, lieu, livraison)
     customer = self.find_by_email(email)
   return customer unless customer.nil?

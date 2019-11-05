@@ -4,13 +4,13 @@
   <div class='col-12 col-md-8 pr-30'>
 <h1 class="mt-4">Passer votre commande</h1>
     <%= simple_form_for @commande do |f|%>
-    <%= f.input :quantités, :include_blank => false%>
+    <%= f.input :quantités, input_html: { min: '1', step: 'any'} %>
 
     <div class="input-group flex-nowrap py-2">
       <div class="input-group-prepend">
         <span class="input-group-text" id="addon-wrapping">Prénom</span>
       </div>
-    <%= text_field_tag "customer[surname]","", class:'form-control', placeholder: 'tapez ici'%>
+    <%= text_field_tag "customer[surname]","", class:'form-control', placeholder: 'tapez ici', required: true%>
     </div>
 
     <div class="input-group flex-nowrap py-2">
@@ -24,21 +24,21 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="addon-wrapping">E-mail</span>
       </div>
-    <%= text_field_tag "customer[email]", "", class:'form-control', placeholder: 'mon.email@email.com'%>
+    <%= text_field_tag "customer[email]", "", class:'form-control', placeholder: 'mon.email@email.com', required: true%>
     </div>
 
     <div class="input-group flex-nowrap py-2">
       <div class="input-group-prepend">
         <span class="input-group-text" id="addon-wrapping">Mobile</span>
       </div>
-    <%= text_field_tag "customer[phonenumber]", "", class:'form-control', placeholder: '06 ** ** ** **'%>
+    <%= text_field_tag "customer[phonenumber]", "", class:'form-control', placeholder: '06 ** ** ** **', required: true%>
     </div>
 
     <div class="input-group flex-now py-2">
       <div class="input-group-prepend">
         <span class="input-group-text" id="addon-wrapping">Livraison</span>
       </div>
-    <%= select_tag "customer[livraison]", raw("<option>Oui</option> <option>Non</option>"), class:'form-control', :prompt => 'Souhaitez vous être livré ?'%>
+    <%= select_tag "customer[livraison]",raw("<option>Oui</option> <option>Non</option>"), class:'form-control', :prompt => 'Souhaitez vous être livré ?', required: true%>
     </div>
     <p>*Les commandes sans livraisons sont à récupérer sur place à gare de Massy-Palaiseau.</p>
 
@@ -46,7 +46,7 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="addon-wrapping">Lieu</span>
       </div>
-    <%= select_tag "customer[lieu]", raw("<option>Massy-Palaiseau</option><option>Antony</option> <option>Verrière-le-Buisson</option>"), class:'form-control', :prompt => 'Choissisez votre lieu de livraison'%>
+    <%= select_tag "customer[lieu]", raw("<option>Massy-Palaiseau</option><option>Antony</option> <option>Verrière-le-Buisson</option>"), class:'form-control', :prompt => 'Choissisez votre lieu de livraison', required: true%>
     </div>
 
     <%= f.submit:"COMMANDER", class: 'btn btn-success float-right mt-2'%>   
