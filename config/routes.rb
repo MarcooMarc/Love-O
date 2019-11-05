@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   get 'commander', to: 'commandes#index'
   get 'macommande', to: 'commandes#new', as: 'macommande'
 
-  resources :commandes, only: :create
+  resources :commandes, only: [:create, :destroy]
+
   resources :workshops, only: :create
   resources :contacts, only: :create
 

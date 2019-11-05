@@ -1,4 +1,5 @@
 class Customer < ApplicationRecord
+
   def self.find_or_create(name, surname, email, phonenumber, lieu, livraison)
     customer = self.find_by_email(email)
   return customer unless customer.nil?

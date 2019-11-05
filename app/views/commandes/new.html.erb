@@ -10,14 +10,14 @@
       <div class="input-group-prepend">
         <span class="input-group-text" id="addon-wrapping">Prénom</span>
       </div>
-    <%= text_field_tag "customer[surname]", "", class:'form-control', placeholder: 'tapez ici'%>
+    <%= text_field_tag "customer[surname]","", class:'form-control', placeholder: 'tapez ici'%>
     </div>
 
     <div class="input-group flex-nowrap py-2">
       <div class="input-group-prepend">
         <span class="input-group-text" id="addon-wrapping">Nom</span>
       </div>
-    <%= text_field_tag "customer[name]", "", class:'form-control', placeholder: 'tapez ici'%>
+    <%= text_field_tag "customer[name]", "", class:'form-control', placeholder: 'tapez ici', required: true%>
     </div>
 
     <div class="input-group flex-nowrap py-2">
@@ -49,7 +49,7 @@
     <%= select_tag "customer[lieu]", raw("<option>Massy-Palaiseau</option><option>Antony</option> <option>Verrière-le-Buisson</option>"), class:'form-control', :prompt => 'Choissisez votre lieu de livraison'%>
     </div>
 
-    <%= f.submit :"COMMANDER", class: 'btn btn-success float-right mt-2'%>   
+    <%= f.submit:"COMMANDER", class: 'btn btn-success float-right mt-2'%>   
     <% end %>
   </div>
 

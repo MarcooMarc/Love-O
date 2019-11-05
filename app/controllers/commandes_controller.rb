@@ -17,6 +17,11 @@ class CommandesController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    @commande = Commande.find(params[:id])
+    @commande.destroy
+  end
+
   private
 
   def commande_params
@@ -24,11 +29,6 @@ class CommandesController < ApplicationController
   end
 
   def customer_params
-    params.require('customer').permit(:name)
-    params.require('customer').permit(:surname)
-    params.require('customer').permit(:email)
-    params.require('customer').permit(:phonenumber)
-    params.require('customer').permit(:livraison)
-    params.require('customer').permit(:lieu)
+    params.require('customer').permit(:name, :surname, :email, :phonenumber, :livraison, :lieu)
   end
 end
